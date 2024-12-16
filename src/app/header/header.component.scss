@@ -1,0 +1,42 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .left-side {
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline-start: 2rem;
+    padding-top: 3rem;
+
+    .title-text {
+      font-size: 32px;
+      font-weight: 400;
+    }
+
+    .subtitle-text {
+      font-size: 16px;
+      font-weight: 200;
+    }
+  }
+}
+
+// DO NOT TOUCH: custom code to make ellipsis vertical
+.ion--ellipsis-vertical {
+  display: inline-block;
+  width: 3rem;
+  height: 4rem;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='48' fill='%23000'/%3E%3Ccircle cx='256' cy='416' r='48' fill='%23000'/%3E%3Ccircle cx='256' cy='96' r='48' fill='%23000'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  margin-top: 3rem;
+  margin-right: 1rem;
+}
