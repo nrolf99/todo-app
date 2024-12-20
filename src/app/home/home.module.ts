@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 import { HeaderComponent } from '../header/header.component';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { ListItemComponent } from '../list-item/list-item.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    ListItemComponent
   ],
   declarations: [
     HomePage,

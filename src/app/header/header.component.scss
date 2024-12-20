@@ -4,7 +4,6 @@
   justify-content: space-between;
 
   .left-side {
-    color: red;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     flex-direction: column;
@@ -24,9 +23,15 @@
   }
 }
 
+hr {
+  width:50%;
+  text-align:left;
+  margin-left:0
+}
+
 // DO NOT TOUCH: custom code to make ellipsis vertical
 .ion--ellipsis-vertical {
-  display: inline-block;
+  display:inline-block;
   width: 3rem;
   height: 4rem;
   --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='48' fill='%23000'/%3E%3Ccircle cx='256' cy='416' r='48' fill='%23000'/%3E%3Ccircle cx='256' cy='96' r='48' fill='%23000'/%3E%3C/svg%3E");
