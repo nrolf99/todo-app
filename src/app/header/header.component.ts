@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent  implements OnInit {
 
-  constructor() { }
+  dateString: string | null = "";
+
+  constructor(private datePipe: DatePipe) { 
+    this.dateString = this.datePipe.transform(new Date(), 'EEEE, MMMM yyyy');
+
+  }
+
 
   ngOnInit() {}
 

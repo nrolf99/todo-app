@@ -7,6 +7,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ListItemComponent } from './list-item/list-item.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,13 @@ import { ListItemComponent } from './list-item/list-item.component';
     AppRoutingModule,
     ListItemComponent
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    { 
+      provide: RouteReuseStrategy, 
+      useClass: IonicRouteStrategy 
+    }, 
+    DatePipe
+  ],
   bootstrap: [AppComponent],
 
 })
