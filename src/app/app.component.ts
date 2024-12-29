@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppViewModel } from './models/appViewModel';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+
+  viewModel: AppViewModel;
+
+  constructor() {
+    this.viewModel = this.initializeViewModel();
+  }
+
+  initializeViewModel = () => {
+    return {
+      list: []
+    }
+  }
+
+
 }
