@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, input, isStandalone } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ListItemViewModel } from '../models/listItemViewModel';
 
 @Component({
