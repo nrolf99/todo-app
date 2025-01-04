@@ -1,8 +1,8 @@
 <div class="checkbox-container">
   <span> 
-    <input type="checkbox" [checked]="done">
+    <input type="checkbox" [checked]="viewModel.done"  (change)="this.checkItem()"/>
     <label>
-      {{text}}
+      {{viewModel.text}}
     </label>
   </span>
 </div>
