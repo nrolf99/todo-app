@@ -1,14 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+import {
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonItem,
+  IonTitle,
+  IonToolbar,
+  ModalController,
+} from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-menu-modal',
-  templateUrl: './menu-modal.component.html',
-  styleUrls: ['./menu-modal.component.scss'],
+  selector: 'menu-modal-component',
+  templateUrl: 'menu-modal.component.html',
+  imports: [FormsModule, IonButton, IonButtons, IonContent, IonHeader, IonItem, IonTitle, IonToolbar],
+  standalone: true
 })
-export class MenuModalComponent  implements OnInit {
+export class MenuModalComponent {
+  name!: string;
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) {}
 
-  ngOnInit() {}
+  cancel() {
+    return this.modalCtrl.dismiss(null, 'cancel');
+  }
 
+  confirm() {
+    return this.modalCtrl.dismiss(this.name, 'confirm');
+  }
 }
